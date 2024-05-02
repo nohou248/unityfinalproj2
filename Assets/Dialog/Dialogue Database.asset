@@ -135,7 +135,7 @@ MonoBehaviour:
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Entry Count
-      value: 4
+      value: 5
       type: 1
       typeString: CustomFieldType_Number
     - title: Entry 1 State
@@ -168,6 +168,14 @@ MonoBehaviour:
       typeString: 
     - title: Entry 4
       value: I got the ring! Now I need to return it to the local.
+      type: 0
+      typeString: 
+    - title: Entry 5 State
+      value: unassigned
+      type: 0
+      typeString: 
+    - title: Entry 5
+      value: I have the key. Now to the dungeon door.
       type: 0
       typeString: 
   locations: []
@@ -1222,7 +1230,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SetCinemachineBrain(false);
+
+          Camera(Medium, NpcDungeon);
+
+          {{default}}'
         type: 0
         typeString: 
       conversationID: 4
@@ -1246,7 +1258,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
+        x: 29
         y: 69
         width: 160
         height: 30
@@ -1293,7 +1305,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'Camera(Medium, PlayerCharacter);
+
+          {{default}}'
         type: 0
         typeString: 
       conversationID: 4
@@ -1366,7 +1380,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SetCinemachineBrain(false);
+
+          Camera(Medium, NpcDungeon);
+
+          {{default}}'
         type: 0
         typeString: 
       conversationID: 4
@@ -1376,7 +1394,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 3
+        destinationConversationID: 4
+        destinationDialogueID: 4
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 'SetQuestState("Find Riches", "active")
 
@@ -1391,6 +1415,73 @@ MonoBehaviour:
         serializedVersion: 2
         x: 26
         y: 176
+        width: 160
+        height: 30
+    - id: 4
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Alright.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'SetCinemachineBrain(true);
+
+          {{default}}'
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 26
+        y: 226
         width: 160
         height: 30
     entryGroups: []
@@ -2375,6 +2466,14 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+        value: 'SetCinemachineBrain(false);
+
+          Camera(Medium, NpcLocal);
+
+          {{default}}'
+        type: 0
+        typeString: 
+      - title: Response Menu Sequence
         value: 
         type: 0
         typeString: 
@@ -2385,7 +2484,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 7
+        originDialogueID: 1
+        destinationConversationID: 7
+        destinationDialogueID: 15
+        isConnector: 0
+        priority: 2
       conditionsString: CurrentQuestEntryState("Find Riches", 2) == "unassigned"
       userScript: 'SetQuestState("Find Riches", "active")
 
@@ -2398,7 +2503,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 145.87535
+        x: 146.93918
         y: 112.647
         width: 160
         height: 30
@@ -2445,7 +2550,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SetCinemachineBrain(false);
+
+          Camera(Medium, NpcLocal);
+
+          {{default}}'
         type: 0
         typeString: 
       conversationID: 7
@@ -2516,7 +2625,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SetCinemachineBrain(false);
+
+          Camera(Medium, PlayerCharacter);
+
+          {{default}}'
         type: 0
         typeString: 
       conversationID: 7
@@ -2588,7 +2701,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SetCinemachineBrain(false);
+
+          Camera(Medium, NpcLocal);
+
+          {{default}}'
         type: 0
         typeString: 
       conversationID: 7
@@ -2665,7 +2782,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SetCinemachineBrain(true);
+
+          {{default}}'
         type: 0
         typeString: 
       conversationID: 7
@@ -2731,7 +2850,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SetCinemachineBrain(false);
+
+          Camera(Medium, PlayerCharacter);
+
+          {{default}}'
         type: 0
         typeString: 
       conversationID: 7
@@ -2802,6 +2925,14 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+        value: 'SetCinemachineBrain(false);
+
+          Camera(Medium, NpcLocal);
+
+          {{default}}'
+        type: 0
+        typeString: 
+      - title: Response Menu Sequence
         value: 
         type: 0
         typeString: 
@@ -2873,7 +3004,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SetCinemachineBrain(false);
+
+          Camera(Medium, PlayerCharacter);
+
+          {{default}}'
         type: 0
         typeString: 
       conversationID: 7
@@ -2946,7 +3081,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SetCinemachineBrain(false);
+
+          Camera(Medium, NpcLocal);
+
+          {{default}}'
         type: 0
         typeString: 
       conversationID: 7
@@ -3017,7 +3156,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SetCinemachineBrain(true);
+
+          {{default}}'
         type: 0
         typeString: 
       conversationID: 7
@@ -3085,7 +3226,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SetCinemachineBrain(false);
+
+          Camera(Medium, NpcLocal);
+
+          {{default}}'
         type: 0
         typeString: 
       conversationID: 7
@@ -3095,7 +3240,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 7
+        originDialogueID: 14
+        destinationConversationID: 7
+        destinationDialogueID: 16
+        isConnector: 0
+        priority: 2
       conditionsString: Variable["Ring.Collected"] >= 1 and (CurrentQuestEntryState("Find
         Riches", 4) == "active")
       userScript: 
@@ -3108,9 +3259,149 @@ MonoBehaviour:
         y: 256.0588
         width: 160
         height: 30
+    - id: 15
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Thanks.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'SetCinemachineBrain(true);
+
+          {{true}}'
+        type: 0
+        typeString: 
+      conversationID: 7
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 146.93918
+        y: 162.647
+        width: 160
+        height: 30
+    - id: 16
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: '[Grab key]'
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: I got it! Now I need to get to the dungeon and open up the door!
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'SetCinemachineBrain(true);
+
+          Camera(Medium, PlayerCharacter);
+
+          {{default}}'
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: 42169e8d-c6ee-423b-8d1e-72ce0f396bfd
+        type: 0
+        typeString: 
+      conversationID: 7
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 35.882355
+        y: 306.0588
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 82.99692}
-    canvasZoom: 1.0599998
+    canvasScrollPosition: {x: 0, y: 37.45381}
+    canvasZoom: 0.90999997
   - id: 8
     fields:
     - title: Title
@@ -3273,7 +3564,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SetCinemachineBrain(false);
+
+          Camera(Medium, NpcGrave);
+
+          {{default}}'
         type: 0
         typeString: 
       conversationID: 8
@@ -3350,7 +3645,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SetCinemachineBrain(false);
+
+          Camera(Medium, PlayerCharacter);
+
+          {{default}}'
         type: 0
         typeString: 
       conversationID: 8
@@ -3421,7 +3720,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SetCinemachineBrain(false);
+
+          Camera(Medium, NpcGrave);
+
+          {{default}}'
         type: 0
         typeString: 
       conversationID: 8
@@ -3492,7 +3795,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SetCinemachineBrain(false);
+
+          Camera(Medium, PlayerCharacter);
+
+          {{default}}'
         type: 0
         typeString: 
       conversationID: 8
@@ -3564,7 +3871,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SetCinemachineBrain(false);
+
+          Camera(Medium, NpcGrave);
+
+          {{default}}'
         type: 0
         typeString: 
       conversationID: 8
@@ -3619,7 +3930,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Whatever.
+        value: '[Get digging.]'
         type: 0
         typeString: 
       - title: Parenthetical
@@ -3635,7 +3946,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SetCinemachineBrain(true);
+
+          {{default}}'
         type: 0
         typeString: 
       - title: EventGuid
@@ -3651,7 +3964,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: SetQuestEntryState("Find Riches", 3, "success")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -3688,7 +4001,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Ok.
+        value: '[Leave]'
         type: 0
         typeString: 
       - title: Parenthetical
@@ -3704,7 +4017,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SetCinemachineBrain(true);
+
+          {{default}}'
         type: 0
         typeString: 
       conversationID: 8
@@ -3727,8 +4042,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 198.96909}
-    canvasZoom: 0.97
+    canvasScrollPosition: {x: 0, y: 142.35294}
+    canvasZoom: 0.85000014
   - id: 9
     fields:
     - title: Title
@@ -4078,7 +4393,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SetCinemachineBrain(false);
+
+          Camera(Medium, NpcSkeleton);
+
+          {{default}}'
         type: 0
         typeString: 
       conversationID: 10
@@ -4149,7 +4468,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SetCinemachineBrain(true);
+
+          {{default}}'
         type: 0
         typeString: 
       conversationID: 10
@@ -4161,12 +4482,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 'Variable["Ring.Collected"] = 1;;
+      userScript: 'Variable["Ring.Collected"] = 1;
 
         SetQuestEntryState("Find
-        Riches", 3, "success");
-
-        SetQuestEntryState("Find Riches", 4, "active")'
+        Riches", 4, "active")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -4295,7 +4614,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 30
-        y: 20
+        y: 19
         width: 160
         height: 30
     - id: 1
@@ -4341,7 +4660,15 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetCinemachineBrain(false);
+        value: 'SetCinemachineBrain(false);
+
+          Camera(Medium, NpcLocal);
+
+          {{default}}'
+        type: 0
+        typeString: 
+      - title: Response Menu Sequence
+        value: 
         type: 0
         typeString: 
       conversationID: 11
@@ -4365,8 +4692,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 70
+        x: 46
+        y: 121
         width: 160
         height: 30
     - id: 2
@@ -4396,7 +4723,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: GAME INTROO
+        value: Response
         type: 0
         typeString: 
       - title: Parenthetical
@@ -4412,7 +4739,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SetCinemachineBrain(true);
+
+          {{default}}'
         type: 0
         typeString: 
       conversationID: 11
@@ -4430,13 +4759,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 120
+        x: 46
+        y: 171
         width: 160
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasZoom: 0.83
   syncInfo:
     syncActors: 0
     syncItems: 0
