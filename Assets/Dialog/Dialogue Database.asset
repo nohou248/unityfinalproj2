@@ -5016,7 +5016,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: Yes.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -5043,7 +5043,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: 
+      conditionsString: CurrentQuestState("Get Shovel") == "success"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -5055,7 +5055,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 161.85545}
+    canvasScrollPosition: {x: 7.216522, y: 0}
     canvasZoom: 0.97
   - id: 9
     fields:
@@ -7087,7 +7087,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: CurrentQuestState("Get Shovel") == "active"
-      userScript: Variable["Shovel.Collected"] = 1;
+      userScript: 'Variable["Shovel.Collected"] = 1;;
+
+        SetQuestState("Get
+        Shovel", "success")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
